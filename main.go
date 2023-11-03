@@ -13,13 +13,13 @@ var db *gorm.DB
 
 func main() {
 	var err error
-	db, err = gorm.Open(mysql.Open("root:cakratendados@tcp(localhost:3306)/db_coba"))
+	db, err = gorm.Open(mysql.Open("root:cakratendados@tcp(172.17.0.2:3306)/db_coba"))
 	if err != nil {
 		fmt.Println("Connection Failed to Open")
 	} else {
 		fmt.Println("Go Docker Running")
 		fmt.Println("Connection Established")
-		fmt.Println("This Service Running on Port: 3000")
+		fmt.Println("This Service Running on Port: 9000")
 		HandleRequest()
 	}
 
