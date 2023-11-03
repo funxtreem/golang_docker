@@ -13,7 +13,7 @@ var db *gorm.DB
 
 func main() {
 	var err error
-	db, err = gorm.Open(mysql.Open("root:cakratendados@tcp(127.0.0.1:3306)/db_coba"))
+	db, err = gorm.Open(mysql.Open("root:cakratendados@tcp(172.18.0.100:3306)/db_coba"))
 	if err != nil {
 		fmt.Println("Connection Failed to Open")
 	} else {
